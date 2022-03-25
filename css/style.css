@@ -597,7 +597,7 @@ body {
 .mailadress {
   display: inline-block;
   margin: 10px 0px;
-  padding: 0 8px;
+  padding: 0 10px;
   border-width: 2px;
   border-style: solid;
   border-color: #272525;
