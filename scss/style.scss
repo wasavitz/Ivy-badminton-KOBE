@@ -45,7 +45,7 @@ html {
     // text-align: center;
   }
   &__Lv3 {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
     line-height: 1.5;
     // text-align: center;
@@ -181,6 +181,7 @@ body {
   display: block;
     h2 {
       text-align: center;
+      // 点滅部分の詳細
       .outline {
         display        : inline-block;
         color          : #dbdbdb;            /* 文字の色 */
@@ -219,37 +220,36 @@ body {
   // セクションボディ
   &__body {
     padding-bottom: 60;
-    .table-weekday {
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        border-style: solid;
-        border-width: 1px;
-        border-color: black;
-        tr {
-          th {
-            border-style: solid;
-            border-width: 1px;
-            border-color: black;
-            // margin: 10px auto auto;
-            text-align: right;
-            // padding: 10px;
-          }
-          td {
-            border-style: solid;
-            border-width: 1px;
-            border-color: black;
-            // margin: 10px auto auto;
-            text-align: right;
-            padding: 10px;
-          }
-          .center {
-            text-align: center;
-          }
-        }
-      }
-    }
   }
+}
+
+// テーブル共通
+table {
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  tr {
+    th {
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+      margin: 10px auto auto;
+      text-align: center;
+      // padding: 10px;
+    }
+    td {
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+      // margin: 10px auto auto;
+      text-align: center;
+      padding: 10px;
+    }
+    .center {
+      text-align: center;
+    }      
+  }        
 }
 
 // 最新情報：練習日

@@ -413,7 +413,7 @@ html {
   line-height: 1.8;
 }
 .c-description__Lv3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 10px;
   line-height: 1.5;
 }
@@ -557,27 +557,28 @@ body {
 .p-home__seciton__body {
   padding-bottom: 60;
 }
-.p-home__seciton__body .table-weekday table {
+
+table {
   border-collapse: collapse;
-  border-spacing: 0;
   border-style: solid;
   border-width: 1px;
   border-color: black;
 }
-.p-home__seciton__body .table-weekday table tr th {
+table tr th {
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  text-align: right;
+  margin: 10px auto auto;
+  text-align: center;
 }
-.p-home__seciton__body .table-weekday table tr td {
+table tr td {
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  text-align: right;
+  text-align: center;
   padding: 10px;
 }
-.p-home__seciton__body .table-weekday table tr .center {
+table tr .center {
   text-align: center;
 }
 
