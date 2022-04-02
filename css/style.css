@@ -378,29 +378,54 @@ summary {
 /**
 1. Correct table border color inheritance in all Chrome and Safari.
 */
+/*モバイルファースト想定でのBreakpoints --------*/
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* mixin呼び出し */
 html {
   scroll-padding-top: 60px;
   /* 固定ヘッダの高さ分 */
+}
+@media screen and (max-width: 600px) {
+  html {
+    max-width: 500px;
+    scroll-padding-top: 70px;
+  }
 }
 
 .c-heading__Lv1 {
   font-size: 28px;
   font-weight: 900;
-  margin-top: 10px;
+  padding: 10px 0px;
   text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .c-heading__Lv1 {
+    padding: 10px 0 0 0;
+  }
 }
 .c-heading__Lv2 {
   font-size: 24px;
   font-weight: 700;
   margin-top: 10px;
-  padding-left: 10px;
+  padding-left: 5px;
   border-bottom: 3px solid;
+}
+@media screen and (max-width: 600px) {
+  .c-heading__Lv2 {
+    font-size: 20px;
+  }
 }
 .c-heading__Lv3 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+  .c-heading__Lv3 {
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    margin-left: 10px;
+  }
 }
 
 .c-description__Lv1 {
@@ -409,13 +434,24 @@ html {
 }
 .c-description__Lv2 {
   font-size: 18px;
-  margin-top: 10px;
+  margin: 5px 10px 0 10px;
   line-height: 1.8;
+}
+@media screen and (max-width: 600px) {
+  .c-description__Lv2 {
+    font-size: 15px;
+  }
 }
 .c-description__Lv3 {
   font-size: 16px;
   margin-top: 10px;
   line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  .c-description__Lv3 {
+    font-size: 14px;
+    margin: 5px 0 0 10px;
+  }
 }
 
 .c-button {
@@ -430,6 +466,20 @@ html {
   background-color: #b1b1b1;
 }
 
+.margin-bottom-weekday {
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 600px) {
+  .margin-bottom-weekday {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.margin-bottom50 {
+  padding-bottom: 50px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -437,22 +487,19 @@ body {
   padding: 0;
 }
 
-.main-container {
-  display: grid;
-  grid-template-columns: 6fr 5fr;
-  grid-template-rows: auto auto auto auto auto;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .p-header {
   grid-row: 1/2;
   grid-template: 1/3;
   background-color: #ffff;
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   width: 100vw;
-  box-sizing: border-box;
+  height: 50px;
+}
+@media screen and (max-width: 600px) {
+  .p-header {
+    height: 70px;
+  }
 }
 .p-header .wrapper {
   background-color: #80808029;
@@ -462,16 +509,36 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1100px;
+}
+@media screen and (max-width: 600px) {
+  .p-header .wrapper .header-container {
+    display: block;
+    text-align: center;
+    width: auto;
+    max-width: 500px;
+  }
 }
 .p-header__teamname {
   font-family: "Train One";
   font-size: 40px;
   width: auto;
-  height: 50px;
+}
+@media screen and (max-width: 600px) {
+  .p-header__teamname {
+    font-size: 24px;
+    padding-top: 10px;
+    height: auto;
+  }
 }
 .p-header__nav__list {
   display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .p-header__nav__list {
+    padding-bottom: 8px;
+  }
 }
 .p-header__nav__list li {
   margin: 0 5px;
@@ -480,9 +547,37 @@ body {
   border-style: solid;
   font-size: 20px;
 }
+@media screen and (max-width: 600px) {
+  .p-header__nav__list li {
+    font-size: 15px;
+    margin-top: 8px;
+    height: auto;
+    border-width: 1px;
+    padding: 0 5px;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  grid-template-rows: auto auto auto auto auto;
+  max-width: 1025px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .main-container {
+    display: block;
+    max-width: 500px;
+  }
+}
 
 .p-home {
   padding-top: 60px;
+}
+@media screen and (max-width: 600px) {
+  .p-home {
+    padding-top: 70px;
+  }
 }
 
 #Latest-info {
@@ -519,6 +614,11 @@ body {
   margin-top: 37px;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .p-box {
+    margin-top: 0px;
+  }
+}
 .p-box__text {
   position: absolute;
   top: 0px;
@@ -530,6 +630,11 @@ body {
 .p-box__text h2 {
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  .p-box__text h2 {
+    padding: 5px;
+  }
+}
 .p-box__text h2 .outline {
   display: inline-block;
   color: #dbdbdb;
@@ -540,22 +645,50 @@ body {
   /* 文字間 */
   text-shadow: 3px 3px 1px #000000, -3px 3px 1px #000000, 3px -3px 1px #000000, -3px -3px 1px #000000, 3px 0px 1px #000000, 0px 3px 1px #000000, -3px 0px 1px #000000, 0px -3px 1px #000000;
 }
+@media screen and (max-width: 600px) {
+  .p-box__text h2 .outline {
+    font-size: 18pt;
+  }
+}
 .p-box__img1 {
   height: 400px;
   background-image: url(https://www.feel-photo.info/wp/wp-content/uploads/i42_web.jpg);
   background-size: cover;
+  background-position: center center;
+}
+@media screen and (max-width: 600px) {
+  .p-box__img1 {
+    display: none;
+  }
 }
 .p-box__img2 {
   height: 400px;
-  background-image: url(https://www.city.chofu.tokyo.jp/www/contents/1564377279572/simple/190729143620_1.jpg);
+  background-image: url(https://www.feel-photo.info/wp/wp-content/uploads/b33_web.jpg);
   background-size: cover;
+  background-position: center center;
+}
+@media screen and (max-width: 600px) {
+  .p-box__img2 {
+    height: 300px;
+  }
 }
 
 .p-home__seciton {
   margin: 30px 0 0;
 }
 .p-home__seciton__body {
-  padding-bottom: 60;
+  padding-bottom: 60px;
+}
+
+.table-block {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .table-block {
+    display: block;
+    margin-top: 5px;
+  }
 }
 
 table {
@@ -564,19 +697,39 @@ table {
   border-width: 1px;
   border-color: black;
 }
+@media screen and (max-width: 600px) {
+  table {
+    margin: 0 auto;
+  }
+}
 table tr th {
   border-style: solid;
   border-width: 1px;
   border-color: black;
   margin: 10px auto auto;
   text-align: center;
+  padding: 8px;
+  font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+  table tr th {
+    font-size: 14px;
+    padding: 5px 3px 5px 3px;
+  }
 }
 table tr td {
   border-style: solid;
   border-width: 1px;
   border-color: black;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+  table tr td {
+    font-size: 14px;
+    padding: 5px 3px 5px 3px;
+  }
 }
 table tr .center {
   text-align: center;
@@ -586,13 +739,25 @@ table tr .center {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   border-style: dashed;
   border-width: 2px;
   border-radius: 10px;
 }
+@media screen and (max-width: 600px) {
+  .practice-day {
+    display: block;
+    margin-top: 5px;
+  }
+}
 .practice-day p {
-  margin: 5px 20px;
+  margin: 5px 10px;
+}
+@media screen and (max-width: 600px) {
+  .practice-day p {
+    display: inline-block;
+    margin: 2px 10px;
+  }
 }
 
 .mailadress {
@@ -604,22 +769,15 @@ table tr .center {
   border-color: #272525;
 }
 
-.table-block {
-  display: flex;
-  justify-content: space-around;
-}
-
 .insititution-block {
   display: flex;
   justify-content: space-between;
 }
-
-.margin-bottom16 {
-  margin-bottom: 38px;
-}
-
-.margin-bottom50 {
-  padding-bottom: 50px;
+@media screen and (max-width: 600px) {
+  .insititution-block {
+    display: block;
+    margin-top: 5px;
+  }
 }
 
 .footer {
@@ -638,12 +796,22 @@ table tr .center {
   justify-content: center;
   background-color: #80808029;
 }
+@media screen and (max-width: 600px) {
+  .footer .wrapper {
+    height: 30px;
+  }
+}
 .footer .wrapper p {
   color: black;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   margin: 0;
+}
+@media screen and (max-width: 600px) {
+  .footer .wrapper p {
+    font-size: 16px;
+  }
 }
 
 .blink {

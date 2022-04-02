@@ -4,8 +4,16 @@
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 @use "../scss/reset";
 
+/* mixin呼び出し */
+@use "../scss/mixin" as m;
+
+
 html {
   scroll-padding-top: 60px; /* 固定ヘッダの高さ分 */
+  @include m.mq(sp){
+    max-width: 500px;
+    scroll-padding-top: 70px;
+  }
 }
 
 // 見出しパーツ
@@ -13,21 +21,31 @@ html {
   &__Lv1 {
     font-size: 28px;
     font-weight: 900;
-    margin-top: 10px;
+    padding: 10px 0px;
     text-align: center;
+    @include m.mq(sp){
+      padding: 10px 0 0 0;
+    }
   }
   &__Lv2 {
     font-size: 24px;
     font-weight: 700;
     margin-top: 10px;
-    padding-left: 10px;
-    // background-color: rgb(177, 177, 177);
+    padding-left: 5px;
     border-bottom: 3px solid;
+    @include m.mq(sp){
+      font-size: 20px;
+    }
   }
   &__Lv3 {
     font-size: 20px;
     font-weight: 700;
     margin-top: 10px;
+    @include m.mq(sp){
+      font-size: 15px;
+      margin: 10px 0 0 10px;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -36,19 +54,23 @@ html {
   &__Lv1 {
     font-size: 24px;
     margin: 0;
-    // text-align: center;
   }
   &__Lv2 {
     font-size: 18px;
-    margin-top: 10px;
+    margin: 5px 10px 0 10px;
     line-height: 1.8;
-    // text-align: center;
+    @include m.mq(sp){
+      font-size: 15px;
+    }
   }
   &__Lv3 {
     font-size: 16px;
     margin-top: 10px;
     line-height: 1.5;
-    // text-align: center;
+    @include m.mq(sp){
+      font-size: 14px;
+      margin: 5px 0 0 10px;
+    }
   }
 }
 
@@ -61,28 +83,28 @@ html {
   font-size: 16px;
   font-weight: 700;
   padding: 10px;
-  // border-style: solid;
-  // border-radius: 8px;
   color: white;
   background-color: rgb(177, 177, 177);
 }
 
+// 個別指定パーツ
+.margin-bottom-weekday {
+  margin-bottom: 38px;
+  @include m.mq(sp){
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.margin-bottom50 {
+  padding-bottom: 50px;
+}
+
 body {
-  // display: flex;
-  // flex-direction: column;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   margin: 0;
   padding: 0;
-}
-
-// コンテイナー(共通)
-.main-container {
-  display: grid;
-  grid-template-columns: 6fr 5fr;
-  grid-template-rows: auto auto auto auto auto;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 // ヘッダー部分
@@ -91,53 +113,84 @@ body {
   grid-template: 1 / 3;
   background-color: #ffff;
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   width: 100vw;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // margin: auto;
-  box-sizing: border-box;
-  // margin-bottom: 10px;
+  height: 50px;
+  @include m.mq(sp){
+    height: 70px;
+  }
   .wrapper {
     background-color: #80808029;
-
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      width: 1200px;
+      max-width: 1100px;
+      @include m.mq(sp){
+        display: block;
+        text-align: center;
+        width: auto;
+        max-width: 500px;
+      }
     }
   }
   &__teamname {
     font-family: "Train One";
     font-size: 40px;
     width: auto;
-    height: 50px;
-    // border-width: 1px;
-    // border-style: solid;
-    // border-color: green;
+    @include m.mq(sp){
+      font-size: 24px;
+      padding-top: 10px;
+      height: auto;
+    }
   }
 
   &__nav {
     &__list {
       display: flex;
-
+      justify-content: space-around;
+      @include m.mq(sp){
+        padding-bottom: 8px;
+      }
       li {
         margin: 0 5px;
         padding: 0 15px;
         border-width: 2px;
         border-style: solid;
         font-size: 20px;
+        @include m.mq(sp){
+          font-size: 15px;
+          margin-top: 8px;
+          height: auto;
+          border-width: 1px;
+          padding: 0 5px;
+        }
       }
     }
+  }
+}
+
+// メイン部分コンテイナー
+.main-container {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  grid-template-rows: auto auto auto auto auto;
+  max-width: 1025px;
+  margin: 0 auto;
+  @include m.mq(sp){
+    display: block;
+    max-width: 500px;
   }
 }
 
 // メインコンテンツ
 .p-home {
   padding-top: 60px;
+  @include m.mq(sp){
+    padding-top: 70px;
+
+  }
 }
 
 // mainの各エリアのグリッド設定
@@ -172,6 +225,9 @@ body {
 .p-box {
   margin-top: 37px;
   position: relative;
+  @include m.mq(sp){
+    margin-top: 0px;
+  }
   &__text {
   position: absolute;
   top: 0px;
@@ -181,6 +237,9 @@ body {
   display: block;
     h2 {
       text-align: center;
+      @include m.mq(sp){
+        padding: 5px;
+      }
       // 点滅部分の詳細
       .outline {
         display        : inline-block;
@@ -196,6 +255,9 @@ body {
              0px  3px 1px #000000,
             -3px  0px 1px #000000,
              0px -3px 1px #000000;
+        @include m.mq(sp){
+          font-size: 18pt;
+        }
       }
     }
   }
@@ -203,32 +265,52 @@ body {
     height: 400px;
     background-image: url(https://www.feel-photo.info/wp/wp-content/uploads/i42_web.jpg);
     background-size: cover;
+    background-position: center center;
+    @include m.mq(sp){
+      display: none;
+    }
   }
   &__img2 {
     height: 400px;
-    background-image: url(https://www.city.chofu.tokyo.jp/www/contents/1564377279572/simple/190729143620_1.jpg);
+    background-image: url(https://www.feel-photo.info/wp/wp-content/uploads/b33_web.jpg);
     background-size: cover;
+    background-position: center center;
+    @include m.mq(sp){
+      height: 300px;
+    }
   }
 }
 
-// セクション
+// セクションタイトル（共通）
 .p-home__seciton {
   margin: 30px 0 0;
-  // セクションヘッド
+  // セクションヘッド（共通）
   &__head {
   }
-  // セクションボディ
+  // セクションボディ（共通）
   &__body {
-    padding-bottom: 60;
+    padding-bottom: 60px;
   }
 }
 
-// テーブル共通
+// 練習日（表レイアウト）
+.table-block {
+  display: flex;
+  justify-content: space-around;
+  @include m.mq(sp){
+    display: block;
+    margin-top: 5px;
+  }
+}
+
 table {
   border-collapse: collapse;
   border-style: solid;
   border-width: 1px;
   border-color: black;
+  @include m.mq(sp){
+    margin: 0 auto;
+  }
   tr {
     th {
       border-style: solid;
@@ -236,15 +318,24 @@ table {
       border-color: black;
       margin: 10px auto auto;
       text-align: center;
-      // padding: 10px;
+      padding: 8px;
+      font-size: 16px;
+      @include m.mq(sp) {
+        font-size: 14px;
+        padding:  5px 3px 5px 3px;
+      }
     }
     td {
       border-style: solid;
       border-width: 1px;
       border-color: black;
-      // margin: 10px auto auto;
       text-align: center;
-      padding: 10px;
+      padding: 8px;
+      font-size: 16px;
+      @include m.mq(sp){
+        font-size: 14px;
+        padding: 5px 3px 5px 3px;
+      }
     }
     .center {
       text-align: center;
@@ -257,12 +348,20 @@ table {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   border-style: dashed;
   border-width: 2px;
   border-radius: 10px;
+  @include m.mq(sp){
+    display: block;
+    margin-top: 5px;
+  }
   p {
-    margin: 5px 20px;
+    margin: 5px 10px;
+    @include m.mq(sp){
+      display: inline-block;
+      margin: 2px 10px;
+    }
   }
 }
 
@@ -276,25 +375,14 @@ table {
   border-color: rgb(39, 37, 37);
 }
 
-// 表ブロック
-.table-block {
-  display: flex;
-  justify-content: space-around;
-}
-
-// ブロック
+// 練習場所
 .insititution-block {
   display: flex;
   justify-content: space-between;
-}
-
-// 個別指定パーツ
-.margin-bottom16 {
-  margin-bottom: 38px;
-}
-
-.margin-bottom50 {
-  padding-bottom: 50px;
+  @include m.mq(sp){
+    display: block;
+    margin-top: 5px;
+  }
 }
 
 // フッター
@@ -305,6 +393,9 @@ table {
   margin-top: 50px;
   background-color: #ffff;
   margin-top: 10px;
+  @include m.mq(sp){
+    
+  }
   .wrapper {
     height: 40px;
     margin: 0 auto;
@@ -312,12 +403,18 @@ table {
     align-items: center;
     justify-content: center;
     background-color: #80808029;
+    @include m.mq(sp){
+      height: 30px;
+    }
     p {
       color: black;
       text-align: center;
       font-size: 18px;
       font-weight: bold;
       margin: 0;
+      @include m.mq(sp){
+        font-size: 16px;
+      }
     }
   }
 }
