@@ -1,2 +1,4 @@
+theme:
+url: "https://wasavitz.github.io/Ivy-badminton-KOBE"
 plugins:
   - jekyll-sitemap
