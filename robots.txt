@@ -1,0 +1,4 @@
+---
+layout: null
+---
+Sitemap: https://wasavitz.github.io/Ivy-badminton-KOBE/sitemap.xml
