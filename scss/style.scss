@@ -263,13 +263,14 @@ body {
   }
   &__img1 {
     height: 400px;
-    background-image: url(../maijvisual.jpeg);
+    background-image: url('../maijvisual.jpeg');
     background-size: cover;
     background-position: center center;
     @include m.mq(sp){
       display: none;
     }
   }
+  /*
   &__img2 {
     height: 400px;
     background-image: url(../maijvisual.jpeg);
@@ -279,6 +280,7 @@ body {
       height: 300px;
     }
   }
+  */
 }
 
 // セクションタイトル（共通）
