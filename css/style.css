@@ -652,7 +652,7 @@ body {
 }
 .p-box__img1 {
   height: 400px;
-  background-image: url(../maijvisual.jpeg);
+  background-image: url('../maijvisual.jpeg');
   background-size: cover;
   background-position: center center;
 }
