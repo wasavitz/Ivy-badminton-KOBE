@@ -661,7 +661,9 @@ body {
     display: none;
   }
 }
+/*
 .p-box__img2 {
+  
   height: 400px;
   background-image: url(https://www.feel-photo.info/wp/wp-content/uploads/b33_web.jpg);
   background-size: cover;
@@ -672,6 +674,7 @@ body {
     height: 300px;
   }
 }
+*/
 
 .p-home__seciton {
   margin: 30px 0 0;
