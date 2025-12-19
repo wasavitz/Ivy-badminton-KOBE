@@ -388,9 +388,70 @@ document.write("("+year+"年"+month+"月"+day+"日 時点)");
           </div>
         </div>
       </section>
+<section id="Members-only" class="p-home__section" style="margin-top: 60px; margin-bottom: 60px;">
+        <div class="p-home__seciton__head">
+          <h2 class="c-heading__Lv2">Members Only</h2>
+        </div>
+        <div class="p-home__section__body" style="text-align: center;">
+          <p class="c-description__Lv2">
+            部内練習用の組み合わせ作成ツールです。<br>
+            利用にはパスワードが必要です。
+          </p>
+          
+          <!-- ボタン -->
+          <button onclick="checkPasswordAndRedirect()" style="
+            background-color: #333; 
+            color: #fff; 
+            padding: 15px 40px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Noto Sans JP', sans-serif;
+            transition: opacity 0.3s;
+          " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            組み合わせ作成ツールを開く
+          </button>
+
+          <!-- パスワード認証用のスクリプト -->
+          <script>
+            function checkPasswordAndRedirect() {
+              // ★ここに設定したいパスワードを入れてください
+              const correctPassword = "ivy"; 
+              
+              // ★ここに移動先のファイル名を入れてください
+              const targetPage = "badminton_app.html";
+
+              const userPassword = prompt("パスワードを入力してください:");
+
+              if (userPassword === correctPassword) {
+                window.location.href = targetPage;
+              } else if (userPassword !== null) {
+                // キャンセル以外で間違った場合
+                alert("パスワードが違います。");
+              }
+            }
+          </script>
+        </div>
+      </section>
+
+
+
+
+
+
+    
     </div>
   </main>
 
+
+
+
+
+
+
+  
   <!-- フッター部分 -->
   <footer class="footer">
     <div class="wrapper">
@@ -401,6 +462,7 @@ document.write("("+year+"年"+month+"月"+day+"日 時点)");
 </body>
 
 </html>
+
 
 
 
