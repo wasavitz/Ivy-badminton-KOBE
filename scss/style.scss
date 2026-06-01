@@ -235,6 +235,12 @@ body {
   right: 0px;
   margin: 5px auto 0px auto;
   display: block;
+    // SP では写真を非表示にするため、絶対配置を解除して通常フローに戻し
+    // キャッチコピーが下のテキストに重ならないようにする
+    @include m.mq(sp){
+      position: static;
+      margin: 0;
+    }
     h2 {
       text-align: center;
       @include m.mq(sp){

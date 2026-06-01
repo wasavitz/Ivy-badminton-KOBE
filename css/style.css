@@ -627,6 +627,12 @@ body {
   margin: 5px auto 0px auto;
   display: block;
 }
+@media screen and (max-width: 600px) {
+  .p-box__text {
+    position: static;
+    margin: 0;
+  }
+}
 .p-box__text h2 {
   text-align: center;
 }
