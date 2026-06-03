@@ -25,6 +25,31 @@
   <meta name="twitter:description" content="神戸市・兵庫県で活動するバドミントンサークル「アイビー」。平日・休日ともに練習中。ビジター・初心者の参加も大歓迎です！">
   <meta name="twitter:image" content="{{ '/maijvisual.jpeg' | absolute_url }}">
 
+  <!-- 構造化データ (JSON-LD): スポーツクラブ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "アイビーバドミントンクラブ",
+    "alternateName": "Ivy Badminton Club",
+    "url": "{{ page.url | absolute_url }}",
+    "image": "{{ '/maijvisual.jpeg' | absolute_url }}",
+    "description": "神戸市・兵庫県で活動するバドミントンサークル。平日・休日ともに練習中。ビジター・初心者の参加も大歓迎です。",
+    "sport": "バドミントン",
+    "email": "aibibadoc@gmail.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "神戸市"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "JP",
+      "addressRegion": "兵庫県",
+      "addressLocality": "神戸市"
+    }
+  }
+  </script>
+
   <!-- CSS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;900&family=Philosopher&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap"
