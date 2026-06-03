@@ -1,3 +1,6 @@
+---
+# このファイルを Jekyll 処理対象にし、og:url / canonical 等で absolute_url を使えるようにする
+---
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -8,6 +11,20 @@
   <meta name="google-site-verification" content="xXmLZ5Do6csH0c7IjcmGOHDKjUQNdDl4pC_ZNW5haXs" />
   <title>神戸市のバドミントンサークル アイビーバドミントンクラブ</title>
   <meta name="description" content="神戸市(神戸市中央区、神戸市兵庫区、神戸市長田区、神戸市垂水区など)で活動するバドミントンクラブ「アイビー」のHPです。平日・休日ともに練習中。ビジター参加も大歓迎です！">
+
+  <!-- OGP / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="アイビーバドミントンクラブ">
+  <meta property="og:title" content="神戸市のバドミントンサークル アイビーバドミントンクラブ">
+  <meta property="og:description" content="神戸市・兵庫県で活動するバドミントンサークル「アイビー」。平日・休日ともに練習中。ビジター・初心者の参加も大歓迎です！">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/maijvisual.jpeg' | absolute_url }}">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="神戸市のバドミントンサークル アイビーバドミントンクラブ">
+  <meta name="twitter:description" content="神戸市・兵庫県で活動するバドミントンサークル「アイビー」。平日・休日ともに練習中。ビジター・初心者の参加も大歓迎です！">
+  <meta name="twitter:image" content="{{ '/maijvisual.jpeg' | absolute_url }}">
+
   <!-- CSS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;900&family=Philosopher&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap"
