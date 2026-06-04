@@ -12,6 +12,9 @@
   <title>神戸市のバドミントンサークル アイビーバドミントンクラブ</title>
   <meta name="description" content="神戸市(神戸市中央区、神戸市兵庫区、神戸市長田区、神戸市垂水区など)で活動するバドミントンクラブ「アイビー」のHPです。平日・休日ともに練習中。ビジター参加も大歓迎です！">
 
+  <!-- 正規URL (canonical): absolute_url で site.url から解決し URL 変更後も自動追従 -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
   <!-- OGP / Twitter Card -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="アイビーバドミントンクラブ">
@@ -50,9 +53,12 @@
   }
   </script>
 
+  <!-- フォント: preconnect で接続を事前確立し読み込みを高速化。未使用の Philosopher は削除 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- CSS -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;900&family=Philosopher&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;900&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>

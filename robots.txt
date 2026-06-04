@@ -1,4 +1,7 @@
 ---
 layout: null
 ---
-Sitemap: https://wasavitz.github.io/Ivy-badminton-KOBE/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
