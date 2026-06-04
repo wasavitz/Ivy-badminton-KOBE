@@ -1,4 +1,9 @@
 theme:
-url: "https://wasavitz.github.io/Ivy-badminton-KOBE"
+# url はドメイン部分のみ。リポジトリ名は baseurl に分離する
+# （GitHub Pages がプロジェクトページに baseurl を自動付与するため、
+#  url にリポジトリ名を含めると absolute_url / sitemap が二重パスになる）
+# ※所有権移譲でアカウントが変わったら、この url のサブドメインだけ変更する
+url: "https://wasavitz.github.io"
+baseurl: "/Ivy-badminton-KOBE"
 plugins:
   - jekyll-sitemap
