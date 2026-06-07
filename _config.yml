@@ -3,7 +3,7 @@ theme:
 # （GitHub Pages がプロジェクトページに baseurl を自動付与するため、
 #  url にリポジトリ名を含めると absolute_url / sitemap が二重パスになる）
 # ※所有権移譲でアカウントが変わったら、この url のサブドメインだけ変更する
-url: "https://wasavitz.github.io"
+url: "https://ryotarosu22.github.io"
 baseurl: "/Ivy-badminton-KOBE"
 plugins:
   - jekyll-sitemap
