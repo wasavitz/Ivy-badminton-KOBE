@@ -1,0 +1,116 @@
+---
+# こべカツ告知ページ（Jekyll 処理対象。canonical / og:url を absolute_url で解決）
+---
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コベカツ｜中学生・小学生のバドミントン体験入会｜アイビーバドミントンクラブ</title>
+  <meta name="description" content="アイビーバドミントンクラブによるコベカツ（中学生・小学生向けバドミントン体験入会）の案内ページです。体験入会は7月下旬から開始予定。会場は須佐野中学校・兵庫中学校。">
+
+  <!-- 正規URL (canonical) -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- OGP / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="アイビーバドミントンクラブ">
+  <meta property="og:title" content="コベカツ｜中学生・小学生のバドミントン体験入会">
+  <meta property="og:description" content="コベカツ（中学生・小学生向けバドミントン体験入会）の案内。体験入会は7月下旬開始予定。会場は須佐野中学校・兵庫中学校。">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/maijvisual.jpeg' | absolute_url }}">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="コベカツ｜中学生・小学生のバドミントン体験入会">
+  <meta name="twitter:description" content="コベカツ（中学生・小学生向けバドミントン体験入会）の案内。体験入会は7月下旬開始予定。会場は須佐野中学校・兵庫中学校。">
+  <meta name="twitter:image" content="{{ '/maijvisual.jpeg' | absolute_url }}">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;900&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ヘッダー部分（トップと共通デザイン。リンクはトップページの各セクションへ） -->
+  <header class="p-header">
+    <div class="wrapper">
+      <div class="header-container">
+        <h1 class="p-header__teamname c-heading__Lv1">
+          <a href="{{ '/index.html' | relative_url }}">アイビーバドミントンクラブ</a>
+        </h1>
+        <div class="p-header__nav">
+          <ul class="p-header__nav__list">
+            <li><a href="{{ '/index.html' | relative_url }}#About-us">About us</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#Contact">Contact</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#Schedule">Schedule</a></li>
+            <li><a href="{{ '/index.html' | relative_url }}#Access">Access</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- メイン部分 -->
+  <main class="p-home">
+    <div style="max-width: 1025px; margin: 0 auto; padding: 0 10px 100px;">
+
+      <!-- こべカツ案内 -->
+      <section class="p-home__section">
+        <div class="p-home__seciton__head">
+          <h2 class="c-heading__Lv2">コベカツ（中学生・小学生 体験入会）</h2>
+        </div>
+        <div class="p-home__section__body">
+          <p class="c-description__Lv2">
+            コベカツの体験入会は7月下旬から開始予定です。
+          </p>
+          <p class="c-description__Lv2">
+            7月と8月の体験会の日程は決まり次第掲載します。場所は須佐野中学校と兵庫中学校です。
+          </p>
+          <p class="c-description__Lv2">
+            コベカツ公式サイト内のアイビーバドミントンクラブ紹介ページは<a href="https://kobe-katsu.smartkobe-portal.com/clubs/001770/" target="_blank" rel="noopener noreferrer" style="color:#1a5fb4; text-decoration:underline;">こちら</a>。
+          </p>
+        </div>
+      </section>
+
+      <!-- 連絡先 -->
+      <section class="p-home__section">
+        <div class="p-home__seciton__head">
+          <h2 class="c-heading__Lv2">Contact</h2>
+        </div>
+        <div class="p-home__section__body">
+          <p class="c-description__Lv2">
+            コベカツに関する連絡はこちら<br>
+            <a href="mailto:aibibadoc@gmail.com" class="mailadress">Mail adress：aibibadoc@gmail.com</a>
+          </p>
+          <p class="c-description__Lv2">
+            ●お 名 前：<br>
+            ●年齢(学年)：<br>
+            ●バドミントン経験年数：
+          </p>
+        </div>
+      </section>
+
+      <!-- トップへ戻る -->
+      <p class="c-description__Lv2">
+        <a href="{{ '/index.html' | relative_url }}" style="color:#1a5fb4; text-decoration:underline;">&laquo; トップページへ戻る</a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- フッター部分 -->
+  <footer class="footer">
+    <div class="wrapper">
+      <p>アイビーバドミントンクラブ</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
